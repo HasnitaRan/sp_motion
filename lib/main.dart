@@ -5,11 +5,13 @@ import 'package:login_spinemotion/app_blocs.dart';
 import 'package:login_spinemotion/app_events.dart';
 import 'package:login_spinemotion/app_states.dart';
 import 'package:login_spinemotion/pages/application/application_page.dart';
+import 'package:login_spinemotion/pages/camera_access/mainscreen.dart';
 import 'package:login_spinemotion/pages/front/front_page.dart';
 import 'package:login_spinemotion/pages/sign_in/sign_in.dart';
 import 'package:login_spinemotion/pages/sign_up/sign_up.dart';
 import 'package:login_spinemotion/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:login_spinemotion/pages/welcome/welcome.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: (context,child)=> MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Welcome(),
+        home: MainScreen(),
           routes: {
           "myHomePage":(context)=>const MyHomePage(),
             "signIn":(context)=>const SignIn(),
