@@ -6,7 +6,10 @@ import 'package:login_spinemotion/app_events.dart';
 import 'package:login_spinemotion/app_states.dart';
 import 'package:login_spinemotion/pages/application/application_page.dart';
 import 'package:login_spinemotion/pages/camera_access/mainscreen.dart';
+import 'package:login_spinemotion/pages/education/education.dart';
 import 'package:login_spinemotion/pages/front/front_page.dart';
+import 'package:login_spinemotion/pages/gerakan_menu/gerakan.dart';
+import 'package:login_spinemotion/pages/home/home_page.dart';
 import 'package:login_spinemotion/pages/sign_in/sign_in.dart';
 import 'package:login_spinemotion/pages/sign_up/sign_up.dart';
 import 'package:login_spinemotion/pages/welcome/bloc/welcome_blocs.dart';
@@ -38,12 +41,15 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: (context,child)=> MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: MainScreen(),
+        home: Welcome(),
           routes: {
-          "myHomePage":(context)=>const MyHomePage(),
+          "homePage":(context)=>const HomePage(),
             "signIn":(context)=>const SignIn(),
             "signUp":(context)=>const SignUp(),
             "frontPage":(context)=> const FrontPage(),
+            "cameraAccess":(context)=> const MainScreen(),
+            "gerakanMenu":(context)=> GerakanList(),
+            "educationPage":(context)=> EducationPage(),
           },
       ),),
     );

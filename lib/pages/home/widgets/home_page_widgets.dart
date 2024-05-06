@@ -7,18 +7,19 @@ import '../../../common/values/colors.dart';
 AppBar buildAppBar(){
   return AppBar(
     title: Container(
-      margin: EdgeInsets.only(left: 7.w, right: 7.w),
+
+      margin: EdgeInsets.only(left: 7.w, right: 7.w, bottom: 10.h),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
-            width: 15.w,
-            height: 12.h,
-            child: Image.asset("assets/icons/menu.png"),
-
-
-          ),
+          // SizedBox(
+          //   width: 15.w,
+          //   height: 12.h,
+          //   child: Image.asset("assets/icons/menu.png"),
+          //
+          //
+          // ),
           GestureDetector(
             child: Container(
               width: 40.w,
@@ -58,7 +59,7 @@ Widget boxInfo(BuildContext context){
         width: screenWidth,
         height: 200.h,
         decoration: BoxDecoration(
-          color: AppColors.primaryElementBg2,
+          color: AppColors.primaryElementText,
           border: Border.all(color: AppColors.primaryFourthElementText),
           borderRadius: BorderRadius.all(Radius.circular(15.h)),
         ),
@@ -130,6 +131,7 @@ Widget boxInfo(BuildContext context){
           ],
         ),
   );
+
 }
 
 Widget healthMenuGrid(BuildContext context) {
@@ -148,14 +150,23 @@ Widget healthMenuGrid(BuildContext context) {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
+                GestureDetector(
+                onTap: () {
+              // Handle tap on "Gerakan Terapi"
+              print('Informasi Kesehatan tapped');
+      // Add navigation or any other action here
+      Navigator.pushNamed(context, "educationPage");
+},
+                child: Image.asset(
                   'assets/images/dokter.png',
                   fit: BoxFit.cover,
                   width: 100,
                   height: 100,
                 ),
-                SizedBox(height: 10),
+                ),
+                SizedBox(height: 5),
                 Text('Informasi Kesehatan'),
+
               ],
             ),
           ),
@@ -171,12 +182,20 @@ Widget healthMenuGrid(BuildContext context) {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
+            GestureDetector(
+            onTap: () {
+            // Handle tap on "Gerakan Terapi"
+            print('Gerakan Terapi tapped');
+            // Add navigation or any other action here
+            Navigator.pushNamed(context, "gerakanMenu");
+            },
+                child: Image.asset(
                   'assets/images/yoga-treatment.png',
                   fit: BoxFit.cover,
                   width: 100,
                   height: 100,
                 ),
+  ),
                 SizedBox(height: 10),
                 Text('Gerakan Terapi'),
               ],

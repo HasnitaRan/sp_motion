@@ -15,10 +15,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromRGBO(171, 176, 180, 1),
       appBar: buildAppBar(),
       body: Container(
-        margin: EdgeInsets.symmetric(vertical: 0, horizontal: 25.w),
+        margin: EdgeInsets.symmetric(vertical: 20.h, horizontal: 25.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -38,6 +38,7 @@ class _HomePageState extends State<HomePage> {
             //   ),
             // ),
             boxInfo(context),
+            SizedBox(height: 120),
             healthMenuGrid(context)
 
           ],

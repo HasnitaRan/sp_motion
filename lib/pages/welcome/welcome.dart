@@ -44,24 +44,24 @@ class _WelcomeState extends State<Welcome> {
                           1,
                           context,
                           "next",
-                          "First See Learning",
-                          "Live a good lifestyle and continuously observe your progress",
+                          "Pantau Kesehatan Tulangmu",
+                          "Kurangi pola hidup yang tidak sehat dan fokus perbaiki",
                           "assets/images/gow.png"
                       ),
                       _page(
                           2,
                           context,
                           "next",
-                          "First See Learning",
-                          "Enhance bone health and achieve an elegant posture",
+                          "Melakukan Gerakan Terapi",
+                          "Dilakukan mandiri dengan aplikasi yang akan memudahkanmu",
                           "assets/images/yoga.png"
                       ),
                       _page(
                           3,
                           context,
                           "get started",
-                          "First See Learning",
-                          "Live a good lifestyle and continuously observe your progress",
+                          "Technology for Better Life",
+                          "Bergabung dengan spinemotion untuk memulai perjalanan sehatmu",
                           "assets/images/org.png"
                       ),
 
